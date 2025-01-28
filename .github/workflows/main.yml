@@ -4,13 +4,13 @@ on:
     push:
         branches: 
             - main
+
 jobs:
     build:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout Code
-            - uses: actions/checkout@v3
+              uses: actions/checkout@v3
 
             - name: Build Docker Container
-            - run: docker build .
-            
+              run: docker build -t my-container:latest .
